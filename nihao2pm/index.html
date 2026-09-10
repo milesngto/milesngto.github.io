@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你好2pm - 2PM组合音乐作品与活动资讯介绍</title>
+<meta name="description" content="你好2pm 页面整理 2PM 组合的基本介绍、音乐作品、成员构成、舞台特色与常见问题，帮助想了解 2PM 的读者快速找到相关信息。">
+<meta name="keywords" content="你好2pm,2PM,2PM组合,2PM音乐,韩国男团,2PM成员">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1a1f;
+  --ink-soft:#4a4550;
+  --line:#e4e0e8;
+  --bg:#faf8fb;
+  --card:#ffffff;
+  --brand:#6d28d9;
+  --brand-soft:#ede9fe;
+  --accent:#f43f5e;
+  --accent-soft:#ffe4e9;
+  --radius:16px;
+  --shadow:0 8px 28px rgba(35,25,60,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,248,251,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:20px;letter-spacing:.5px;
+}
+.logo-mark{
+  width:38px;height:38px;border-radius:12px;
+  background:linear-gradient(135deg,var(--brand),var(--accent));
+  color:#fff;display:grid;place-items:center;
+  font-size:15px;font-weight:800;letter-spacing:0;
+}
+.logo small{
+  display:block;font-size:11px;font-weight:500;color:var(--ink-soft);
+  letter-spacing:1.5px;
+}
+.main-nav ul{
+  display:flex;gap:6px;list-style:none;flex-wrap:wrap;
+}
+.main-nav a{
+  padding:8px 14px;border-radius:999px;font-size:14.5px;
+  color:var(--ink-soft);transition:.2s;
+}
+.main-nav a:hover,.main-nav a.active{
+  background:var(--brand-soft);color:var(--brand);font-weight:600;
+}
+.header-cta{
+  padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;
+  background:var(--ink);color:#fff;white-space:nowrap;
+}
+.header-cta:hover{background:var(--brand)}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:56px 0 44px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(109,40,217,.10),transparent 42%),
+    radial-gradient(circle at 88% 8%,rgba(244,63,94,.10),transparent 40%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-tag{
+  display:inline-block;font-size:13px;font-weight:600;letter-spacing:1px;
+  color:var(--brand);background:var(--brand-soft);
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(28px,4vw,44px);line-height:1.28;font-weight:800;
+  letter-spacing:-.5px;margin-bottom:18px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,var(--brand),var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{
+  font-size:16.5px;color:var(--ink-soft);max-width:56ch;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;
+  font-size:15px;font-weight:600;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--brand);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);background:#fff;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+
+.hero-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:24px;
+  padding:26px;box-shadow:var(--shadow);
+}
+.hero-panel h3{
+  font-size:15px;font-weight:700;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.hero-panel h3::before{
+  content:"";width:6px;height:18px;border-radius:3px;
+  background:linear-gradient(var(--brand),var(--accent));
+}
+.fact-list{list-style:none;display:grid;gap:12px}
+.fact-list li{
+  display:flex;justify-content:space-between;gap:14px;
+  font-size:14.5px;padding-bottom:12px;border-bottom:1px dashed var(--line);
+}
+.fact-list li:last-child{border-bottom:none;padding-bottom:0}
+.fact-list span:first-child{color:var(--ink-soft)}
+.fact-list span:last-child{font-weight:600;text-align:right}
+
+/* ---------- section base ---------- */
+section{padding:52px 0}
+.section-head{margin-bottom:30px;max-width:70ch}
+.section-head .kicker{
+  font-size:13px;font-weight:700;letter-spacing:2px;
+  color:var(--accent);text-transform:uppercase;margin-bottom:8px;
+}
+.section-head h2{
+  font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.3px;
+  margin-bottom:10px;
+}
+.section-head p{color:var(--ink-soft);font-size:15.5px}
+
+/* ---------- intro ---------- */
+.intro-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:34px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px;box-shadow:var(--shadow);
+}
+.intro-block h3{font-size:19px;font-weight:700;margin-bottom:12px}
+.intro-block p{color:var(--ink-soft);font-size:15.5px;margin-bottom:14px}
+.intro-block p:last-child{margin-bottom:0}
+.intro-note{
+  background:var(--brand-soft);border-radius:12px;padding:18px 20px;
+  font-size:14.5px;color:#4c1d95;
+}
+.intro-note strong{display:block;margin-bottom:6px;font-size:15px}
+
+/* ---------- works ---------- */
+.work-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;
+}
+.work-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.25s;position:relative;overflow:hidden;
+}
+.work-card::after{
+  content:"";position:absolute;inset:auto -30% -60% auto;
+  width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle,rgba(109,40,217,.12),transparent 70%);
+  transition:.3s;
+}
+.work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d8cffb}
+.work-card:hover::after{transform:scale(1.4)}
+.work-card .tag{
+  display:inline-block;font-size:12px;font-weight:600;color:var(--brand);
+  background:var(--brand-soft);padding:3px 10px;border-radius:999px;margin-bottom:14px;
+}
+.work-card h3{font-size:17px;font-weight:700;margin-bottom:10px;position:relative;z-index:1}
+.work-card p{font-size:14.5px;color:var(--ink-soft);position:relative;z-index:1}
+
+/* ---------- members ---------- */
+.member-strip{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;
+}
+.member-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px;text-align:center;
+}
+.member-avatar{
+  width:56px;height:56px;border-radius:50%;margin:0 auto 14px;
+  display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;
+  background:linear-gradient(135deg,var(--brand),var(--accent));
+}
+.member-card h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.member-card p{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--brand),var(--accent));
+  border-radius:2px;opacity:.35;
+}
+.timeline-item{position:relative;padding-bottom:26px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{
+  content:"";position:absolute;left:-26px;top:8px;width:12px;height:12px;
+  border-radius:50%;background:#fff;border:3px solid var(--brand);
+}
+.timeline-item h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.timeline-item p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- guide / tips ---------- */
+.guide{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;
+}
+.guide-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;
+}
+.guide-item .num{
+  font-size:13px;font-weight:800;letter-spacing:1px;color:var(--accent);margin-bottom:12px;
+}
+.guide-item h3{font-size:17px;font-weight:700;margin-bottom:10px}
+.guide-item p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- faq ---------- */
+.faq-list{display:grid;gap:14px}
+.faq-item{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px 24px;
+}
+.faq-item summary{
+  cursor:pointer;font-weight:700;font-size:16px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";font-size:20px;font-weight:400;color:var(--brand);
+  transition:.2s;flex-shrink:0;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{
+  margin-top:14px;font-size:14.8px;color:var(--ink-soft);
+  padding-top:14px;border-top:1px dashed var(--line);
+}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:#17141d;color:#b9b3c4;padding:48px 0 26px;margin-top:30px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px;margin-bottom:34px;
+}
+.site-footer h4{color:#fff;font-size:15px;margin-bottom:14px;font-weight:700}
+.site-footer p{font-size:14px;line-height:1.8}
+.site-footer ul{list-style:none;display:grid;gap:9px}
+.site-footer ul a{font-size:14px;color:#b9b3c4;transition:.2s}
+.site-footer ul a:hover{color:#fff}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:20px;
+  font-size:13px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .intro-block{grid-template-columns:1fr;padding:26px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .header-inner{flex-wrap:wrap;gap:12px}
+  .main-nav{order:3;width:100%}
+  .main-nav ul{justify-content:flex-start}
+  .header-cta{display:none}
+  section{padding:38px 0}
+  .hero{padding:38px 0 30px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">2PM</span>
+      <span>你好2pm<small>HELLO 2PM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#intro">组合简介</a></li>
+        <li><a href="#works">音乐作品</a></li>
+        <li><a href="#members">成员构成</a></li>
+        <li><a href="#timeline">发展脉络</a></li>
+        <li><a href="#guide">入门指南</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="#guide">新粉入门</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">韩国男子组合 · 资料整理</span>
+        <h1>你好2pm：想了解 <em>2PM</em>，可以先从这些基本信息看起</h1>
+        <p class="lead">
+          如果你搜索“你好2pm”，多半是想快速弄清楚 2PM 是什么组合、有哪些成员、唱过什么歌、舞台风格有什么特点。
+          本页把公开可查的基础信息按主题整理在一起，方便初次接触的读者建立整体印象，再决定深入听哪一张专辑、看哪一段舞台。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#intro">从组合简介开始</a>
+          <a class="btn btn-ghost" href="#works">查看音乐作品分类</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>快速信息卡</h3>
+        <ul class="fact-list">
+          <li><span>组合名称</span><span>2PM</span></li>
+          <li><span>所属领域</span><span>韩国流行音乐</span></li>
+          <li><span>出道年份</span><span>2008 年</span></li>
+          <li><span>活动形式</span><span>团体专辑 · 舞台演出</span></li>
+          <li><span>风格印象</span><span>力量感舞台 · 成熟曲风</span></li>
+          <li><span>本页定位</span><span>信息整理与入门指引</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">About</div>
+        <h2>2PM 是一个什么样的组合</h2>
+        <p>先把“是什么”说清楚，再谈“听什么”，是了解一个组合比较省时间的方式。</p>
+      </div>
+
+      <div class="intro-block">
+        <div>
+          <h3>从名字与定位说起</h3>
+          <p>
+            2PM 是 2008 年出道的韩国男子组合，名称取自一天中气温最高的“下午两点”，
+            这个命名本身就带有一种热烈、直接的意味，也在一定程度上影响了外界对组合舞台气质的印象。
+          </p>
+          <p>
+            组合早期以强烈的舞台表现力和偏硬朗的形象被大众记住，之后随着成员成长与音乐尝试的丰富，
+            作品在舞曲、抒情、R&amp;B 等方向上都有延伸，整体呈现出从少年感走向成熟感的转变过程。
+          </p>
+          <h3>为什么很多人从舞台开始认识他们</h3>
+          <p>
+            对不少听众来说，第一次接触 2PM 并不是从专辑封面，而是从一段现场舞台开始。
+            他们的表演往往强调肢体张力与团队配合，镜头感和节奏处理是讨论度较高的部分，
+            因此“看现场”常常被当作了解这个组合的入口。
+          </p>
+        </div>
+        <div>
+          <div class="intro-note">
+            <strong>阅读提示</strong>
+            本页内容以公开、可核实的组合层面信息为主，不涉及未经证实的传闻、私人生活细节或商业数据。
+            成员个人活动的具体安排会随时间变化，建议以官方渠道发布的信息为准。
+          </div>
+          <h3 style="margin-top:24px">适合哪些读者</h3>
+          <p>
+            如果你刚刚听到某首歌、刷到某段舞台，想确认“这是哪个组合”，或者想系统性地按时间顺序听一遍他们的作品，
+            本页的分类与脉络部分会比较实用。如果你已经是长期听众，也可以把这里当作回顾用的索引。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Discography</div>
+        <h2>按类型梳理的音乐作品方向</h2>
+        <p>与其罗列一份容易过时的清单，不如先按风格方向分类，再顺着兴趣往下听。</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <span class="tag">舞曲 / 主打</span>
+          <h3>节奏强烈的舞台型作品</h3>
+          <p>这类作品通常承担主打曲的角色，编曲强调鼓点与副歌记忆点，配合群舞编排，是现场演出中最容易被记住的部分。</p>
+        </article>
+        <article class="work-card">
+          <span class="tag">抒情 / 中板</span>
+          <h3>情绪表达更细腻的曲目</h3>
+          <p>速度放慢之后，人声的层次和情感处理会更突出，适合在安静环境下单独听，也常被用来展示组合的另一面。</p>
+        </article>
+        <article class="work-card">
+          <span class="tag">R&amp;B / 流行</span>
+          <h3>融合型与尝试性作品</h3>
+          <p>在流行框架内加入 R&amp;B、电子等元素，节奏处理更松弛，体现了组合在不同阶段对声音方向的探索。</p>
+        </article>
+        <article class="work-card">
+          <span class="tag">日本活动</span>
+          <h3>面向日本市场的发行</h3>
+          <p>组合在日本也有音乐活动，相关作品在编曲与制作取向上会与韩语发行有所区别，适合对比着听。</p>
+        </article>
+        <article class="work-card">
+          <span class="tag">现场 / 演唱会</span>
+          <h3>舞台版本与现场专辑</h3>
+          <p>现场版本往往在编曲、互动和编排上与录音室版本不同，是理解组合舞台能力的直接材料。</p>
+        </article>
+        <article class="work-card">
+          <span class="tag">个人 / 小分队</span>
+          <h3>成员个人音乐活动</h3>
+          <p>成员在团体之外也有各自的音乐与演艺方向，风格差异较大，可以按个人兴趣单独了解。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERS -->
+  <section id="members">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Members</div>
+        <h2>成员构成与各自的辨识点</h2>
+        <p>团体组合的乐趣之一，是在合唱里分辨出不同的声音与位置。以下是成员层面的概括性说明。</p>
+      </div>
+
+      <div class="member-strip">
+        <div class="member-card">
+          <div class="member-avatar">Jun. K</div>
+          <h3>Jun. K</h3>
+          <p>主唱方向，参与创作，声音辨识度高</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">N</div>
+          <h3>Nichkhun</h3>
+          <p>团体早期成员之一，跨语种活动较多</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">T</div>
+          <h3>Taecyeon</h3>
+          <p>说唱与表演方向，参与词曲创作</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">W</div>
+          <h3>Wooyoung</h3>
+          <p>舞蹈与主唱方向，舞台表现稳定</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">J</div>
+          <h3>Junho</h3>
+          <p>主唱与表演方向，个人音乐活动活跃</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">C</div>
+          <h3>Chansung</h3>
+          <p>说唱与表演方向，同时涉足影视</p>
+        </div>
+      </div>
+      <p style="margin-top:20px;font-size:14px;color:var(--ink-soft)">
+        说明：组合成员构成在不同时期可能有所变化，以上为大众认知度较高的成员列表，具体以官方公开信息为准。
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Timeline</div>
+        <h2>按阶段理解组合的发展脉络</h2>
+        <p>把作品放回时间线里，会更容易理解风格变化的原因。</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>出道与早期阶段</h3>
+          <p>以强烈的舞台形象进入大众视野，主打曲目偏舞曲方向，团队配合与体能型表演是这一时期的显著标签。</p>
+        </div>
+        <div class="timeline-item">
+          <h3>风格拓展阶段</h3>
+          <p>作品开始出现更多中板与抒情取向，人声表现被放到更重要的位置，组合的音乐面貌逐渐立体。</p>
+        </div>
+        <div class="timeline-item">
+          <h3>海外活动与日本市场</h3>
+          <p>在日本等地展开音乐活动，发行面向当地市场的作品，同时也扩大了现场演出的覆盖范围。</p>
+        </div>
+        <div class="timeline-item">
+          <h3>成员个人发展与团体并行</h3>
+          <p>成员在音乐、影视、综艺等方向各自展开活动，团体层面的回归与演出则以阶段性形式出现。</p>
+        </div>
+        <div class="timeline-item">
+          <h3>成熟期的稳定输出</h3>
+          <p>整体气质从少年感转向成熟，作品更注重氛围与完成度，长期听众对这一阶段的评价通常较为稳定。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Starter Guide</div>
+        <h2>新手入门：按什么顺序听比较顺</h2>
+        <p>面对一个出道多年的组合，最省力的方式不是从头到尾按年份听，而是先找到自己的口味入口。</p>
+      </div>
+
+      <div class="guide">
+        <div class="guide-item">
+          <div class="num">STEP 01</div>
+          <h3>先听主打曲</h3>
+          <p>主打曲通常最能代表一个时期的风格取向，先听三五首主打，基本就能判断自己是否喜欢这个组合的整体调性。</p>
+        </div>
+        <div class="guide-item">
+          <div class="num">STEP 02</div>
+          <h3>再看现场舞台</h3>
+          <p>如果主打曲听得进去，接着找对应的现场版本。舞台是理解这个组合的重要维度，也会让歌曲的节奏感更直观。</p>
+        </div>
+        <div class="guide-item">
+          <div class="num">STEP 03</div>
+          <h3>补抒情与非主打</h3>
+          <p>专辑里的非主打曲往往更自由，抒情和中板作品能补上主打曲没有展现的声音细节，适合安静时听。</p>
+        </div>
+        <div class="guide-item">
+          <div class="num">STEP 04</div>
+          <h3>按成员兴趣延伸</h3>
+          <p>对某位成员的声音或风格特别有感觉时，可以顺着他的个人作品继续听，往往会发现与团体作品不同的面貌。</p>
+        </div>
+        <div class="guide-item">
+          <div class="num">STEP 05</div>
+          <h3>留意版本差异</h3>
+          <p>同一首歌的录音室版、现场版、日语版在编曲和情绪上可能有明显差别，对比着听会更有意思。</p>
+        </div>
+        <div class="guide-item">
+          <div class="num">STEP 06</div>
+          <h3>以官方信息为准</h3>
+          <p>涉及行程、发行与活动安排时，优先参考官方渠道。二手信息更新不及时，容易出现偏差。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>整理了几个初次了解 2PM 时比较常出现的疑问。</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>“你好2pm”通常是在找什么内容？</summary>
+          <p>
+            这类搜索大多出现在刚接触组合的阶段，想确认组合名称、成员构成、代表作品或舞台片段。
+            因此本页把基础信息、作品分类和入门顺序放在前面，减少来回跳转的成本。
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>2PM 的音乐风格该怎么概括？</summary>
+          <p>
+            很难用单一标签概括。早期偏重舞曲与强烈舞台感，之后逐渐加入抒情、中板与 R&amp;B 元素，
+            不同时期的作品取向差异比较明显，建议按阶段分开听。
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>第一次听，推荐从哪里开始？</summary>
+          <p>
+            可以先听几首讨论度较高的主打曲，再找对应的现场舞台。
+            如果更喜欢安静的声音表现，直接跳到抒情和中板曲目也可以，没有必须遵守的顺序。
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>成员现在还一起活动吗？</summary>
+          <p>
+            团体活动与成员个人活动在不同时期各有侧重，具体安排会随时间变化。
+            涉及近期行程与发行计划时，建议直接查看官方发布的信息。
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>在哪里可以听到这些作品？</summary>
+          <p>
+            正规音乐平台通常会上架已发行的作品，具体可用范围受地区授权影响。
+            使用平台搜索组合名或曲名即可，注意选择正版渠道。
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>你好2pm</h4>
+        <p>
+          一个围绕 2PM 组合的公开信息整理页面，内容以基础介绍、作品分类与入门指引为主，
+          帮助初次接触的读者更快建立整体印象。
+        </p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#intro">组合简介</a></li>
+          <li><a href="#works">音乐作品</a></li>
+          <li><a href="#members">成员构成</a></li>
+          <li><a href="#timeline">发展脉络</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读提示</h4>
+        <ul>
+          <li><a href="#guide">新手入门顺序</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本页为信息整理性质内容，不隶属于任何经纪公司或官方机构。</span>
+      <span>相关行程与发行信息请以官方渠道为准。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动（对不支持 scroll-behavior 的浏览器做补充）
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // 导航高亮跟随滚动
+  var sections = document.querySelectorAll('main section[id]');
+  var navLinks = document.querySelectorAll('.main-nav a');
+  if ('IntersectionObserver' in window && sections.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>
